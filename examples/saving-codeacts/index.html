@@ -10,29 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://gradion-ai.github.io/freeact/">
+        <link rel="canonical" href="https://gradion-ai.github.io/freeact/examples/saving-codeacts/">
       
       
+        <link rel="prev" href="../output-parser/">
       
-        <link rel="next" href="installation/">
+      
+        <link rel="next" href="../agent-skills/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Overview - freeact</title>
+        <title>Code Action Reuse - freeact</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,11 +53,11 @@
       
     
     
-      <link rel="stylesheet" href="assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#code-action-reuse" class="md-skip">
           Skip to content
         </a>
       
@@ -92,9 +94,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="freeact" class="md-header__button md-logo" aria-label="freeact" data-md-component="logo">
+    <a href="../.." title="freeact" class="md-header__button md-logo" aria-label="freeact" data-md-component="logo">
       
-  <img src="images/logo.png" alt="logo">
+  <img src="../../images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -111,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Code Action Reuse
             
           </span>
         </div>
@@ -202,7 +204,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="." class="md-tabs__link">
+        <a href="../.." class="md-tabs__link">
           
   
   
@@ -222,7 +224,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="api/agent/" class="md-tabs__link">
+        <a href="../../api/agent/" class="md-tabs__link">
           
   
   
@@ -256,9 +258,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="freeact" class="md-nav__button md-logo" aria-label="freeact" data-md-component="logo">
+    <a href="../.." title="freeact" class="md-nav__button md-logo" aria-label="freeact" data-md-component="logo">
       
-  <img src="images/logo.png" alt="logo">
+  <img src="../../images/logo.png" alt="logo">
 
     </a>
     freeact
@@ -339,37 +341,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Overview
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -385,59 +360,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#interfaces" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Interfaces
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Features
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#beyond-task-execution" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Beyond task execution
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -450,7 +372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="installation/" class="md-nav__link">
+      <a href="../../installation/" class="md-nav__link">
         
   
   
@@ -478,7 +400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="quickstart/" class="md-nav__link">
+      <a href="../../quickstart/" class="md-nav__link">
         
   
   
@@ -506,7 +428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="configuration/" class="md-nav__link">
+      <a href="../../configuration/" class="md-nav__link">
         
   
   
@@ -534,7 +456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sandbox/" class="md-nav__link">
+      <a href="../../sandbox/" class="md-nav__link">
         
   
   
@@ -562,7 +484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sdk/" class="md-nav__link">
+      <a href="../../sdk/" class="md-nav__link">
         
   
   
@@ -590,7 +512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cli/" class="md-nav__link">
+      <a href="../../cli/" class="md-nav__link">
         
   
   
@@ -615,6 +537,8 @@
                 
   
   
+    
+  
   
   
     
@@ -630,11 +554,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8" checked>
         
           
           <label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="">
@@ -655,7 +579,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_8">
             <span class="md-nav__icon md-icon"></span>
             
@@ -673,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="examples/output-parser/" class="md-nav__link">
+      <a href="../output-parser/" class="md-nav__link">
         
   
   
@@ -698,10 +622,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="examples/saving-codeacts/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Action Reuse
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -717,6 +668,48 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#compose-and-save" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compose and Save
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discover-and-reuse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discover and Reuse
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -729,7 +722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="examples/agent-skills/" class="md-nav__link">
+      <a href="../agent-skills/" class="md-nav__link">
         
   
   
@@ -757,7 +750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="examples/sandbox-mode/" class="md-nav__link">
+      <a href="../sandbox-mode/" class="md-nav__link">
         
   
   
@@ -785,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="examples/python-packages/" class="md-nav__link">
+      <a href="../python-packages/" class="md-nav__link">
         
   
   
@@ -876,7 +869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="llms.txt" class="md-nav__link">
+      <a href="../../llms.txt" class="md-nav__link">
         
   
   
@@ -904,7 +897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="llms-full.txt" class="md-nav__link">
+      <a href="../../llms-full.txt" class="md-nav__link">
         
   
   
@@ -999,7 +992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api/agent/" class="md-nav__link">
+      <a href="../../api/agent/" class="md-nav__link">
         
   
   
@@ -1027,7 +1020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api/config/" class="md-nav__link">
+      <a href="../../api/config/" class="md-nav__link">
         
   
   
@@ -1055,7 +1048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api/generate/" class="md-nav__link">
+      <a href="../../api/generate/" class="md-nav__link">
         
   
   
@@ -1083,7 +1076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api/permissions/" class="md-nav__link">
+      <a href="../../api/permissions/" class="md-nav__link">
         
   
   
@@ -1138,10 +1131,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#interfaces" class="md-nav__link">
+  <a href="#compose-and-save" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Interfaces
+        Compose and Save
       
     </span>
   </a>
@@ -1149,21 +1142,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
+  <a href="#discover-and-reuse" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Features
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#beyond-task-execution" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Beyond task execution
+        Discover and Reuse
       
     </span>
   </a>
@@ -1190,66 +1172,61 @@
   
 
 
-<h1 id="overview">Overview</h1>
-<p>Freeact is a lightweight, general-purpose agent that acts via <a href="https://machinelearning.apple.com/research/codeact"><em>code actions</em></a> rather than JSON tool calls<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. It writes executable Python code that can call multiple tools programmatically, process intermediate results, and use loops and conditionals in a single pass, which would otherwise require many inference rounds with JSON tool calling.</p>
-<p><a href="#beyond-task-execution">Beyond executing tools</a>, freeact can develop new tools from successful code actions, evolving its own tool library over time. Tools are defined via Python interfaces, progressively discovered and loaded from the agent's <em>workspace</em><sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> rather than consuming context upfront. All execution happens locally in a secure sandbox via <a href="https://gradion-ai.github.io/ipybox/">ipybox</a> and <a href="https://github.com/anthropic-experimental/sandbox-runtime">sandbox-runtime</a>.</p>
-<div class="admonition note">
-<p class="admonition-title">Supported models</p>
-<p>Freeact supports models compatible with <a href="https://ai.pydantic.dev/">Pydantic AI</a>, with <code>gemini-3-flash-preview</code> as the current default.</p>
+<h1 id="code-action-reuse">Code Action Reuse</h1>
+<p>Any code action can be saved as a discoverable tool, enabling tool libraries to evolve as agents work. Composite code actions that chain multiple tools are a common example.</p>
+<p>Freeact provides the <a href="https://github.com/gradion-ai/freeact/tree/main/freeact/agent/config/templates/skills/saving-codeacts"><code>saving-codeacts</code></a> skill for saving code actions as reusable tools. It separates interface (<code>api.py</code>) from implementation (<code>impl.py</code>). The interface contains the function signature, Pydantic models, and docstrings. The implementation contains the actual logic. </p>
+<p>This separation enables efficient tool discovery: agents inspect signatures and docstrings without loading implementation details. The implementation stays hidden, saving tokens and reducing distraction by keeping non-essential details out of context.</p>
+<p>The following example shows how to <a href="#compose-and-save">compose and save</a> a code action as a parameterized tool, then <a href="#discover-and-reuse">discover and reuse</a> it in a new session.</p>
+<h2 id="compose-and-save">Compose and Save</h2>
+<div class="admonition hint">
+<p class="admonition-title">Recorded session</p>
+<p>A <a href="../../recordings/saving-codeacts-1/conversation.html">recorded session</a> of this example is appended <a href="#recording-compose">below</a>.</p>
 </div>
-<h2 id="interfaces">Interfaces</h2>
-<p>Freeact provides a <a href="sdk/">Python SDK</a> for application integration, and a <a href="cli/">CLI tool</a> for running the agent in a terminal.</p>
-<h2 id="features">Features</h2>
-<p>Freeact combines the following elements into a coherent system:</p>
-<table>
-<thead>
-<tr>
-<th>Feature</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Programmatic tool calling</strong></td>
-<td>Agents <a href="quickstart/#running-a-task">call tools programmatically</a> within code actions rather than through JSON structures. Freeact <a href="quickstart/#generating-mcp-tool-apis">generates typed Python APIs</a> from MCP tool schemas to enable this. LLMs are heavily pretrained on Python code, making this more reliable than JSON tool calling.</td>
-</tr>
-<tr>
-<td><strong>Reusable code actions</strong></td>
-<td>Successful code actions can be <a href="examples/saving-codeacts/">saved as discoverable tools</a> with clean interfaces where function signature, data models and docstrings are separated from implementation. Agents can then use these tools in later code actions, preserving behavior as executable tools. The result is tool libraries that evolve as agents work.</td>
-</tr>
-<tr>
-<td><strong>Agent skills</strong></td>
-<td>Freeact supports the <a href="https://agentskills.io/">agentskills.io</a> specification, a lightweight format for <a href="examples/agent-skills/">extending agent capabilities</a> with specialized knowledge and workflows. Freeact <a href="configuration/#bundled-skills">provides skills</a> for saving code actions as tools, enhancing existing tools, and structured task planning.</td>
-</tr>
-<tr>
-<td><strong>Progressive loading</strong></td>
-<td>Tool and skill information is <a href="quickstart/#running-a-task">loaded in stages as needed</a>, rather than consuming context upfront. For tools: category names, tool names, and API definitions load progressively as needed. For skills: metadata loads at startup; full instructions load when triggered.</td>
-</tr>
-<tr>
-<td><strong>Sandbox mode</strong></td>
-<td>Code actions execute locally in a stateful IPython kernel via ipybox. <a href="sandbox/">Sandbox mode</a> restricts filesystem and network access for executed code (<a href="examples/sandbox-mode/">example</a>). Stdio MCP servers can be sandboxed independently.</td>
-</tr>
-<tr>
-<td><strong>Unified approval</strong></td>
-<td>Code actions, programmatic tool calls, and JSON-based tool calls all require approval before proceeding. <a href="sdk/#approval">Unified approval</a> ensures every action can be inspected and gated with a uniform interface regardless of how it originates.</td>
-</tr>
-<tr>
-<td><strong>Python ecosystem</strong></td>
-<td>Agents can use any Python package available in the execution environment, from data processing with <code>pandas</code> to visualization with <code>matplotlib</code> to HTTP requests with <code>httpx</code>. Many capabilities like data transformation or scientific computing don't need to be wrapped as tools when agents can <a href="examples/python-packages/">call libraries directly</a>.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="beyond-task-execution">Beyond task execution</h2>
-<p>Most agents focus on either software development (coding agents) or on non-coding task execution using predefined tools, but not both. Freeact covers a wider range of this spectrum, from task execution to tool development. Its primary function is executing code actions with programmatic tool calling, guided by user instructions and custom skills. </p>
-<p>Beyond task execution, freeact can save successful <a href="examples/saving-codeacts/">code actions as reusable tools</a> or <a href="examples/output-parser/">enhance existing tools</a>, acting as a toolsmith in its <em>workspace</em><sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup>. For heavier tool engineering like refactoring or reducing tool overlap, freeact is complemented by coding agents like Claude Code, Gemini CLI, etc. Currently the toolsmith role is interactive, with autonomous tool library evolution planned for future versions.</p>
+<p>This example continues from the <a href="../output-parser/">enhancing tools</a> example, where <code>search_repositories</code> was augmented with a <code>run_parsed()</code> function returning typed <code>Repository</code> objects. In the same workspace, start a new CLI tool session with:</p>
+<div class="highlight"><pre><span></span><code>uvx<span class="w"> </span>freeact
+</code></pre></div>
+<p>With a query like</p>
+<blockquote>
+<p>get the latest 5 commits of the 3 github repos of torvalds with the most stars. For each repo, output name, stars and the first line of commit messages, and the link to the commit</p>
+</blockquote>
+<p>the agent discovers <code>search_repositories</code> and <code>list_commits</code> as appropriate tools and inspects their APIs. Because the enhanced <code>search_repositories</code> tool now returns typed output via <code>run_parsed()</code>, the agent can compose these tools in a single code action, passing repository names from search results as input to <code>list_commits</code><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
+<p>After code action execution, we instruct the agent to save it as a reusable tool:</p>
+<blockquote>
+<p>save this as tool under category github, with username, top_n_repos, top_n_commits as parameter</p>
+</blockquote>
+<p>The agent:</p>
+<ol>
+<li>Loads the <code>saving-codeacts</code> skill</li>
+<li>Creates a <code>gentools/github/commits_of_top_repos/</code> package</li>
+<li>Saves the tool API with a parameterized <code>run()</code> function to <a href="https://github.com/gradion-ai/ipybox/blob/main/docs/generated/gentools/github/commits_of_top_repos/api.py"><code>api.py</code></a></li>
+<li>Saves the implementation to <a href="https://github.com/gradion-ai/ipybox/blob/main/docs/generated/gentools/github/commits_of_top_repos/impl.py"><code>impl.py</code></a>, lazily imported by <code>run()</code></li>
+<li>Tests the saved tool to verify it works</li>
+</ol>
+<p>The structure of the saved tool is:</p>
+<div class="highlight"><pre><span></span><code>gentools/
+└── github/
+    └── commits_of_top_repos/
+        ├── __init__.py
+        ├── api.py       # Public interface
+        └── impl.py      # Implementation
+</code></pre></div>
+<p><a href="../../recordings/saving-codeacts-1/conversation.html" id="recording-compose" target="_blank"><img alt="Interactive mode" src="../../recordings/saving-codeacts-1/conversation.svg" /></a></p>
+<h2 id="discover-and-reuse">Discover and Reuse</h2>
+<div class="admonition hint">
+<p class="admonition-title">Recorded session</p>
+<p>A <a href="../../recordings/saving-codeacts-2/conversation.html">recorded session</a> of this example is appended <a href="#recording-reuse">below</a>.</p>
+</div>
+<p>In a new session, the saved tool is discovered like any other Python tool. During discovery, only the API is inspected, not the implementation. When asked to</p>
+<blockquote>
+<p>get the latest 3 commits of the 2 github repos of torvalds with the most stars. For each repo, output name, stars and the first line of commit messages, and the link to the commit</p>
+</blockquote>
+<p>the agent discovers the previously saved tool, inspects its API, and calls it with different parameters (<code>top_n_repos=2</code>, <code>top_n_commits=3</code>).</p>
+<p><a href="../../recordings/saving-codeacts-2/conversation.html" id="recording-reuse" target="_blank"><img alt="Interactive mode" src="../../recordings/saving-codeacts-2/conversation.svg" /></a></p>
 <div class="footnote">
 <hr />
 <ol>
 <li id="fn:1">
-<p>Freeact also supports JSON-based tool calls on MCP servers, but mainly for internal operations.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-<li id="fn:2">
-<p>A workspace is an agent's working directory where it manages tools, skills, configuration and other resources.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p>Since <code>list_commits</code> doesn't return typed output, the agent guesses output structure from training data, which may or may not work on first attempt. This can be made more reliable by also generating an output parser for <code>list_commits</code>.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
@@ -1314,10 +1291,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.preview", "navigation.instant.progress", "navigation.top", "navigation.tracking", "search.suggest", "toc.follow", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.preview", "navigation.instant.progress", "navigation.top", "navigation.tracking", "search.suggest", "toc.follow", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

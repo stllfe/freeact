@@ -10,31 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://gradion-ai.github.io/freeact/installation/">
+        <link rel="canonical" href="https://gradion-ai.github.io/freeact/api/config/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../agent/">
       
       
-        <link rel="next" href="../quickstart/">
+        <link rel="next" href="../generate/">
       
       
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Installation - freeact</title>
+        <title>Config - freeact</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,11 +53,11 @@
       
     
     
-      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installation" class="md-skip">
+        <a href="#freeact.agent.config.Config" class="md-skip">
           Skip to content
         </a>
       
@@ -94,9 +94,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="freeact" class="md-header__button md-logo" aria-label="freeact" data-md-component="logo">
+    <a href="../.." title="freeact" class="md-header__button md-logo" aria-label="freeact" data-md-component="logo">
       
-  <img src="../images/logo.png" alt="logo">
+  <img src="../../images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Installation
+              Config
             
           </span>
         </div>
@@ -198,13 +198,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href=".." class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
           
   
   
@@ -220,11 +218,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../api/agent/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../agent/" class="md-tabs__link">
           
   
   
@@ -258,9 +258,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="freeact" class="md-nav__button md-logo" aria-label="freeact" data-md-component="logo">
+    <a href="../.." title="freeact" class="md-nav__button md-logo" aria-label="freeact" data-md-component="logo">
       
-  <img src="../images/logo.png" alt="logo">
+  <img src="../../images/logo.png" alt="logo">
 
     </a>
     freeact
@@ -284,31 +284,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
             
   
   
@@ -326,7 +321,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -344,7 +339,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -369,37 +364,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Installation
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
         
   
   
@@ -415,126 +383,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prerequisites
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#workspace-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Workspace Setup
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Workspace Setup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#option-1-minimal" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Option 1: Minimal
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#option-2-with-virtual-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Option 2: With Virtual Environment
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#api-key" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        API Key
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sandbox-mode-prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sandbox Mode Prerequisites
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Sandbox Mode Prerequisites">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#macos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        macOS
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Linux
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -547,7 +395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../quickstart/" class="md-nav__link">
+      <a href="../../quickstart/" class="md-nav__link">
         
   
   
@@ -575,7 +423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuration/" class="md-nav__link">
+      <a href="../../configuration/" class="md-nav__link">
         
   
   
@@ -603,7 +451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sandbox/" class="md-nav__link">
+      <a href="../../sandbox/" class="md-nav__link">
         
   
   
@@ -631,7 +479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sdk/" class="md-nav__link">
+      <a href="../../sdk/" class="md-nav__link">
         
   
   
@@ -659,7 +507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cli/" class="md-nav__link">
+      <a href="../../cli/" class="md-nav__link">
         
   
   
@@ -693,20 +541,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8" >
         
           
-          <label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="">
+          <label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="0">
             
   
   
@@ -742,7 +587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/output-parser/" class="md-nav__link">
+      <a href="../../examples/output-parser/" class="md-nav__link">
         
   
   
@@ -770,7 +615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/saving-codeacts/" class="md-nav__link">
+      <a href="../../examples/saving-codeacts/" class="md-nav__link">
         
   
   
@@ -798,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/agent-skills/" class="md-nav__link">
+      <a href="../../examples/agent-skills/" class="md-nav__link">
         
   
   
@@ -826,7 +671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/sandbox-mode/" class="md-nav__link">
+      <a href="../../examples/sandbox-mode/" class="md-nav__link">
         
   
   
@@ -854,7 +699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/python-packages/" class="md-nav__link">
+      <a href="../../examples/python-packages/" class="md-nav__link">
         
   
   
@@ -896,20 +741,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
         
           
-          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="">
+          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="0">
             
   
   
@@ -945,7 +787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../llms.txt" class="md-nav__link">
+      <a href="../../llms.txt" class="md-nav__link">
         
   
   
@@ -973,7 +815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../llms-full.txt" class="md-nav__link">
+      <a href="../../llms-full.txt" class="md-nav__link">
         
   
   
@@ -1013,26 +855,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -1050,7 +897,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1068,7 +915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/agent/" class="md-nav__link">
+      <a href="../agent/" class="md-nav__link">
         
   
   
@@ -1093,10 +940,35 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../api/config/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Config
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1112,6 +984,79 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#freeact.agent.config.Config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Config
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#freeact.agent.config.SkillMetadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SkillMetadata
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#freeact.agent.config.init_config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        init_config
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#freeact.agent.config.DEFAULT_MODEL" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DEFAULT_MODEL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#freeact.agent.config.DEFAULT_MODEL_SETTINGS" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DEFAULT_MODEL_SETTINGS
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1124,7 +1069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/generate/" class="md-nav__link">
+      <a href="../generate/" class="md-nav__link">
         
   
   
@@ -1152,7 +1097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/permissions/" class="md-nav__link">
+      <a href="../permissions/" class="md-nav__link">
         
   
   
@@ -1197,8 +1142,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1207,10 +1150,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#freeact.agent.config.Config" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisites
+        Config
       
     </span>
   </a>
@@ -1218,49 +1161,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#workspace-setup" class="md-nav__link">
+  <a href="#freeact.agent.config.SkillMetadata" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Workspace Setup
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Workspace Setup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#option-1-minimal" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Option 1: Minimal
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#option-2-with-virtual-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Option 2: With Virtual Environment
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#api-key" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        API Key
+        SkillMetadata
       
     </span>
   </a>
@@ -1268,41 +1172,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sandbox-mode-prerequisites" class="md-nav__link">
+  <a href="#freeact.agent.config.init_config" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Sandbox Mode Prerequisites
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Sandbox Mode Prerequisites">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#macos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        macOS
+        init_config
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#linux" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#freeact.agent.config.DEFAULT_MODEL" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Linux
+        DEFAULT_MODEL
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#freeact.agent.config.DEFAULT_MODEL_SETTINGS" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DEFAULT_MODEL_SETTINGS
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1326,54 +1224,316 @@
   
 
 
-<h1 id="installation">Installation</h1>
-<h2 id="prerequisites">Prerequisites</h2>
-<ul>
-<li>Python 3.11+</li>
-<li><a href="https://docs.astral.sh/uv/">uv</a> package manager</li>
-<li>Node.js 20+ (for MCP servers)</li>
-</ul>
-<h2 id="workspace-setup">Workspace Setup</h2>
-<p>A workspace is a directory where freeact stores configuration, tools, and other resources. Both setup options below require their own workspace directory.</p>
-<h3 id="option-1-minimal">Option 1: Minimal</h3>
-<p>The fastest way to get started is using <code>uvx</code>, which keeps the virtual environment separate from the workspace:</p>
-<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>my-workspace<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>my-workspace
-uvx<span class="w"> </span>freeact
+  <h1>Config</h1>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="freeact.agent.config.Config" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">freeact.agent.config.Config</span>
+
+
+</h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">Config</span><span class="p">(</span>
+    <span class="n">working_dir</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">model</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span> <span class="o">|</span> <span class="n"><span title="pydantic_ai.models.Model">Model</span></span> <span class="o">=</span> <span class="n"><a class="autorefs autorefs-internal" href="#freeact.agent.config.DEFAULT_MODEL">DEFAULT_MODEL</a></span><span class="p">,</span>
+    <span class="n">model_settings</span><span class="p">:</span> <span class="n"><span title="pydantic_ai.models.ModelSettings">ModelSettings</span></span> <span class="o">=</span> <span class="n"><a class="autorefs autorefs-internal" href="#freeact.agent.config.DEFAULT_MODEL_SETTINGS">DEFAULT_MODEL_SETTINGS</a></span><span class="p">,</span>
+<span class="p">)</span>
 </code></pre></div>
-<p>This is ideal when you don't need to install additional Python packages in the workspace.</p>
-<h3 id="option-2-with-virtual-environment">Option 2: With Virtual Environment</h3>
-<p>To create a workspace with its own virtual environment:</p>
-<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>my-workspace<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>my-workspace
-uv<span class="w"> </span>init<span class="w"> </span>--bare<span class="w"> </span>--python<span class="w"> </span><span class="m">3</span>.13
-uv<span class="w"> </span>add<span class="w"> </span>freeact
+
+    <div class="doc doc-contents first">
+
+
+
+        <p>Configuration loader for the <code>.freeact/</code> directory structure.</p>
+<p>Loads and parses all configuration on instantiation: skills metadata,
+system prompts, MCP servers (JSON tool calls), and PTC servers
+(programmatic tool calling).</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="freeact.agent.config.Config.working_dir">working_dir</span></code></td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Agent's working directory.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="freeact.agent.config.Config.freeact_dir">freeact_dir</span></code></td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Path to <code>.freeact/</code> configuration directory.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="freeact.agent.config.Config.plans_dir">plans_dir</span></code></td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Path to <code>.freeact/plans/</code> for plan storage.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="freeact.agent.config.Config.model">model</span></code></td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>LLM model name or instance.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="freeact.agent.config.Config.model_settings">model_settings</span></code></td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Model-specific settings (e.g., thinking config).</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="freeact.agent.config.Config.skills_metadata">skills_metadata</span></code></td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Parsed skill definitions from <code>.freeact/skills/*/SKILL.md</code>.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="freeact.agent.config.Config.system_prompt">system_prompt</span></code></td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Rendered system prompt from <code>.freeact/prompts/system.md</code>.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="freeact.agent.config.Config.mcp_servers">mcp_servers</span></code></td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p><code>MCPServer</code> instances used for JSON tool calling.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="freeact.agent.config.Config.ptc_servers">ptc_servers</span></code></td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Raw PTC server configs for programmatic tool generation.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="freeact.agent.config.SkillMetadata" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">freeact.agent.config.SkillMetadata</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">SkillMetadata</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></span><span class="p">)</span>
 </code></pre></div>
-<p>Then run freeact with:</p>
-<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>run<span class="w"> </span>freeact
+
+    <div class="doc doc-contents first">
+
+
+
+        <p>Metadata parsed from a skill's SKILL.md frontmatter.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="freeact.agent.config.init_config" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">freeact.agent.config.init_config</span>
+
+
+</h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">init_config</span><span class="p">(</span><span class="n">working_dir</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
-<p>This approach lets you install additional packages (e.g., <code>uv add pandas</code>) that will be available to the agent.</p>
-<h2 id="api-key">API Key</h2>
-<p>Freeact uses <code>gemini-3-flash-preview</code> as the default model. Set the API key in your environment:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">GEMINI_API_KEY</span><span class="o">=</span><span class="s2">&quot;your-api-key&quot;</span>
+
+    <div class="doc doc-contents first">
+
+        <p>Initialize <code>.freeact/</code> config directory from templates.</p>
+<p>Copies template files that don't already exist, preserving user modifications.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>working_dir</code>
+            </td>
+            <td>
+                  <code><a class="autorefs autorefs-external" title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Base directory. Defaults to current working directory.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h2 id="freeact.agent.config.DEFAULT_MODEL" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">freeact.agent.config.DEFAULT_MODEL</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+</h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">DEFAULT_MODEL</span> <span class="o">=</span> <span class="s1">&#39;gemini-3-flash-preview&#39;</span>
 </code></pre></div>
-<p>Alternatively, place it in a <code>.env</code> file in the workspace directory:</p>
-<div class="highlight"><span class="filename">.env</span><pre><span></span><code>GEMINI_API_KEY=your-api-key
+
+    <div class="doc doc-contents first">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h2 id="freeact.agent.config.DEFAULT_MODEL_SETTINGS" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">freeact.agent.config.DEFAULT_MODEL_SETTINGS</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+</h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">DEFAULT_MODEL_SETTINGS</span> <span class="o">=</span> <span class="n"><span title="pydantic_ai.models.google.GoogleModelSettings">GoogleModelSettings</span></span><span class="p">(</span>
+    <span class="n"><span title="pydantic_ai.models.google.GoogleModelSettings(google_thinking_config)">google_thinking_config</span></span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;thinking_level&quot;</span><span class="p">:</span> <span class="s2">&quot;high&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;include_thoughts&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">)</span>
 </code></pre></div>
-<h2 id="sandbox-mode-prerequisites">Sandbox Mode Prerequisites</h2>
-<p>For running freeact in sandbox mode, install Anthropic's <a href="https://github.com/anthropic-experimental/sandbox-runtime">sandbox-runtime</a>:</p>
-<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>@anthropic-ai/sandbox-runtime@0.0.21
-</code></pre></div>
-<p>Higher versions should also work, but 0.0.21 is the version used in current tests. </p>
-<p>Required OS-level packages are:</p>
-<h3 id="macos">macOS</h3>
-<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>ripgrep
-</code></pre></div>
-<p>macOS uses the native <code>sandbox-exec</code> for process isolation.</p>
-<h3 id="linux">Linux</h3>
-<div class="highlight"><pre><span></span><code>apt-get<span class="w"> </span>install<span class="w"> </span>bubblewrap<span class="w"> </span>socat<span class="w"> </span>ripgrep
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Sandboxing on Linux is currently work in progress.</p>
+
+    <div class="doc doc-contents first">
+
+    </div>
+
 </div>
 
 
@@ -1436,10 +1596,10 @@ uv<span class="w"> </span>add<span class="w"> </span>freeact
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.preview", "navigation.instant.progress", "navigation.top", "navigation.tracking", "search.suggest", "toc.follow", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.preview", "navigation.instant.progress", "navigation.top", "navigation.tracking", "search.suggest", "toc.follow", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

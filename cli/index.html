@@ -10,29 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://gradion-ai.github.io/freeact/">
+        <link rel="canonical" href="https://gradion-ai.github.io/freeact/cli/">
       
       
+        <link rel="prev" href="../sdk/">
       
-        <link rel="next" href="installation/">
+      
+        <link rel="next" href="../examples/output-parser/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Overview - freeact</title>
+        <title>CLI Tool - freeact</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,11 +53,11 @@
       
     
     
-      <link rel="stylesheet" href="assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#cli-tool" class="md-skip">
           Skip to content
         </a>
       
@@ -92,9 +94,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="freeact" class="md-header__button md-logo" aria-label="freeact" data-md-component="logo">
+    <a href=".." title="freeact" class="md-header__button md-logo" aria-label="freeact" data-md-component="logo">
       
-  <img src="images/logo.png" alt="logo">
+  <img src="../images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -111,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              CLI Tool
             
           </span>
         </div>
@@ -202,7 +204,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="." class="md-tabs__link">
+        <a href=".." class="md-tabs__link">
           
   
   
@@ -222,7 +224,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="api/agent/" class="md-tabs__link">
+        <a href="../api/agent/" class="md-tabs__link">
           
   
   
@@ -256,9 +258,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="freeact" class="md-nav__button md-logo" aria-label="freeact" data-md-component="logo">
+    <a href=".." title="freeact" class="md-nav__button md-logo" aria-label="freeact" data-md-component="logo">
       
-  <img src="images/logo.png" alt="logo">
+  <img src="../images/logo.png" alt="logo">
 
     </a>
     freeact
@@ -339,37 +341,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Overview
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -385,59 +360,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#interfaces" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Interfaces
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Features
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#beyond-task-execution" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Beyond task execution
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -450,7 +372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="installation/" class="md-nav__link">
+      <a href="../installation/" class="md-nav__link">
         
   
   
@@ -478,7 +400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="quickstart/" class="md-nav__link">
+      <a href="../quickstart/" class="md-nav__link">
         
   
   
@@ -506,7 +428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="configuration/" class="md-nav__link">
+      <a href="../configuration/" class="md-nav__link">
         
   
   
@@ -534,7 +456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sandbox/" class="md-nav__link">
+      <a href="../sandbox/" class="md-nav__link">
         
   
   
@@ -562,7 +484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sdk/" class="md-nav__link">
+      <a href="../sdk/" class="md-nav__link">
         
   
   
@@ -587,10 +509,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="cli/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI Tool
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -606,6 +555,98 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Options
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactive-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interactive Mode
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interactive Mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User messages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-attachments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Image Attachments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approval-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Approval Prompt
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -673,7 +714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="examples/output-parser/" class="md-nav__link">
+      <a href="../examples/output-parser/" class="md-nav__link">
         
   
   
@@ -701,7 +742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="examples/saving-codeacts/" class="md-nav__link">
+      <a href="../examples/saving-codeacts/" class="md-nav__link">
         
   
   
@@ -729,7 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="examples/agent-skills/" class="md-nav__link">
+      <a href="../examples/agent-skills/" class="md-nav__link">
         
   
   
@@ -757,7 +798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="examples/sandbox-mode/" class="md-nav__link">
+      <a href="../examples/sandbox-mode/" class="md-nav__link">
         
   
   
@@ -785,7 +826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="examples/python-packages/" class="md-nav__link">
+      <a href="../examples/python-packages/" class="md-nav__link">
         
   
   
@@ -876,7 +917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="llms.txt" class="md-nav__link">
+      <a href="../llms.txt" class="md-nav__link">
         
   
   
@@ -904,7 +945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="llms-full.txt" class="md-nav__link">
+      <a href="../llms-full.txt" class="md-nav__link">
         
   
   
@@ -999,7 +1040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api/agent/" class="md-nav__link">
+      <a href="../api/agent/" class="md-nav__link">
         
   
   
@@ -1027,7 +1068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api/config/" class="md-nav__link">
+      <a href="../api/config/" class="md-nav__link">
         
   
   
@@ -1055,7 +1096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api/generate/" class="md-nav__link">
+      <a href="../api/generate/" class="md-nav__link">
         
   
   
@@ -1083,7 +1124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api/permissions/" class="md-nav__link">
+      <a href="../api/permissions/" class="md-nav__link">
         
   
   
@@ -1138,10 +1179,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#interfaces" class="md-nav__link">
+  <a href="#options" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Interfaces
+        Options
       
     </span>
   </a>
@@ -1149,10 +1190,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
+  <a href="#examples" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Features
+        Examples
       
     </span>
   </a>
@@ -1160,13 +1201,52 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#beyond-task-execution" class="md-nav__link">
+  <a href="#interactive-mode" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Beyond task execution
+        Interactive Mode
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Interactive Mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User messages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-attachments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Image Attachments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approval-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Approval Prompt
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1190,69 +1270,127 @@
   
 
 
-<h1 id="overview">Overview</h1>
-<p>Freeact is a lightweight, general-purpose agent that acts via <a href="https://machinelearning.apple.com/research/codeact"><em>code actions</em></a> rather than JSON tool calls<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. It writes executable Python code that can call multiple tools programmatically, process intermediate results, and use loops and conditionals in a single pass, which would otherwise require many inference rounds with JSON tool calling.</p>
-<p><a href="#beyond-task-execution">Beyond executing tools</a>, freeact can develop new tools from successful code actions, evolving its own tool library over time. Tools are defined via Python interfaces, progressively discovered and loaded from the agent's <em>workspace</em><sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> rather than consuming context upfront. All execution happens locally in a secure sandbox via <a href="https://gradion-ai.github.io/ipybox/">ipybox</a> and <a href="https://github.com/anthropic-experimental/sandbox-runtime">sandbox-runtime</a>.</p>
-<div class="admonition note">
-<p class="admonition-title">Supported models</p>
-<p>Freeact supports models compatible with <a href="https://ai.pydantic.dev/">Pydantic AI</a>, with <code>gemini-3-flash-preview</code> as the current default.</p>
-</div>
-<h2 id="interfaces">Interfaces</h2>
-<p>Freeact provides a <a href="sdk/">Python SDK</a> for application integration, and a <a href="cli/">CLI tool</a> for running the agent in a terminal.</p>
-<h2 id="features">Features</h2>
-<p>Freeact combines the following elements into a coherent system:</p>
+<h1 id="cli-tool">CLI tool</h1>
+<p>The <code>freeact</code> or <code>freeact run</code> command starts the <a href="#interactive-mode">interactive mode</a>:</p>
+<div class="highlight"><pre><span></span><code>freeact
+</code></pre></div>
+<p>A <code>.freeact/</code> <a href="../configuration/">configuration</a> directory is created automatically if it does not exist yet. The <code>init</code> subcommand initializes the configuration directory without starting the interactive mode:</p>
+<div class="highlight"><pre><span></span><code>freeact<span class="w"> </span>init
+</code></pre></div>
+<h2 id="options">Options</h2>
 <table>
 <thead>
 <tr>
-<th>Feature</th>
+<th>Option</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Programmatic tool calling</strong></td>
-<td>Agents <a href="quickstart/#running-a-task">call tools programmatically</a> within code actions rather than through JSON structures. Freeact <a href="quickstart/#generating-mcp-tool-apis">generates typed Python APIs</a> from MCP tool schemas to enable this. LLMs are heavily pretrained on Python code, making this more reliable than JSON tool calling.</td>
+<td><code>--sandbox</code></td>
+<td>Run code execution in <a href="../sandbox/">sandbox mode</a>.</td>
 </tr>
 <tr>
-<td><strong>Reusable code actions</strong></td>
-<td>Successful code actions can be <a href="examples/saving-codeacts/">saved as discoverable tools</a> with clean interfaces where function signature, data models and docstrings are separated from implementation. Agents can then use these tools in later code actions, preserving behavior as executable tools. The result is tool libraries that evolve as agents work.</td>
+<td><code>--sandbox-config PATH</code></td>
+<td>Path to sandbox configuration file.</td>
 </tr>
 <tr>
-<td><strong>Agent skills</strong></td>
-<td>Freeact supports the <a href="https://agentskills.io/">agentskills.io</a> specification, a lightweight format for <a href="examples/agent-skills/">extending agent capabilities</a> with specialized knowledge and workflows. Freeact <a href="configuration/#bundled-skills">provides skills</a> for saving code actions as tools, enhancing existing tools, and structured task planning.</td>
+<td><code>--log-level LEVEL</code></td>
+<td>Set logging level: <code>debug</code>, <code>info</code> (default), <code>warning</code>, <code>error</code>, <code>critical</code>.</td>
 </tr>
 <tr>
-<td><strong>Progressive loading</strong></td>
-<td>Tool and skill information is <a href="quickstart/#running-a-task">loaded in stages as needed</a>, rather than consuming context upfront. For tools: category names, tool names, and API definitions load progressively as needed. For skills: metadata loads at startup; full instructions load when triggered.</td>
+<td><code>--record</code></td>
+<td>Record the conversation as SVG and HTML files.</td>
 </tr>
 <tr>
-<td><strong>Sandbox mode</strong></td>
-<td>Code actions execute locally in a stateful IPython kernel via ipybox. <a href="sandbox/">Sandbox mode</a> restricts filesystem and network access for executed code (<a href="examples/sandbox-mode/">example</a>). Stdio MCP servers can be sandboxed independently.</td>
+<td><code>--record-dir PATH</code></td>
+<td>Output directory for recordings (default: <code>output</code>).</td>
 </tr>
 <tr>
-<td><strong>Unified approval</strong></td>
-<td>Code actions, programmatic tool calls, and JSON-based tool calls all require approval before proceeding. <a href="sdk/#approval">Unified approval</a> ensures every action can be inspected and gated with a uniform interface regardless of how it originates.</td>
-</tr>
-<tr>
-<td><strong>Python ecosystem</strong></td>
-<td>Agents can use any Python package available in the execution environment, from data processing with <code>pandas</code> to visualization with <code>matplotlib</code> to HTTP requests with <code>httpx</code>. Many capabilities like data transformation or scientific computing don't need to be wrapped as tools when agents can <a href="examples/python-packages/">call libraries directly</a>.</td>
+<td><code>--record-title TEXT</code></td>
+<td>Title for the recording (default: <code>Conversation</code>).</td>
 </tr>
 </tbody>
 </table>
-<h2 id="beyond-task-execution">Beyond task execution</h2>
-<p>Most agents focus on either software development (coding agents) or on non-coding task execution using predefined tools, but not both. Freeact covers a wider range of this spectrum, from task execution to tool development. Its primary function is executing code actions with programmatic tool calling, guided by user instructions and custom skills. </p>
-<p>Beyond task execution, freeact can save successful <a href="examples/saving-codeacts/">code actions as reusable tools</a> or <a href="examples/output-parser/">enhance existing tools</a>, acting as a toolsmith in its <em>workspace</em><sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup>. For heavier tool engineering like refactoring or reducing tool overlap, freeact is complemented by coding agents like Claude Code, Gemini CLI, etc. Currently the toolsmith role is interactive, with autonomous tool library evolution planned for future versions.</p>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p>Freeact also supports JSON-based tool calls on MCP servers, but mainly for internal operations.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-<li id="fn:2">
-<p>A workspace is an agent's working directory where it manages tools, skills, configuration and other resources.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
+<h2 id="examples">Examples</h2>
+<p>Running code execution in <a href="../sandbox/">sandbox mode</a>:</p>
+<div class="highlight"><pre><span></span><code>freeact<span class="w"> </span>--sandbox
+</code></pre></div>
+<p>Running with a <a href="../sandbox/#custom-configuration">custom sandbox configuration</a>:</p>
+<div class="highlight"><pre><span></span><code>freeact<span class="w"> </span>--sandbox<span class="w"> </span>--sandbox-config<span class="w"> </span>sandbox-config.json
+</code></pre></div>
+<p>Recording a session for documentation:</p>
+<div class="highlight"><pre><span></span><code>freeact<span class="w"> </span>--record<span class="w"> </span>--record-dir<span class="w"> </span>docs/recordings/demo<span class="w"> </span>--record-title<span class="w"> </span><span class="s2">&quot;Demo Session&quot;</span>
+</code></pre></div>
+<h2 id="interactive-mode">Interactive Mode</h2>
+<p>The interactive mode provides a conversation interface with the agent in a terminal window.</p>
+<p><a href="../recordings/cli/conversation.html" target="_blank"><img alt="Interactive mode" src="../recordings/cli/conversation.svg" /></a></p>
+<h3 id="user-messages">User messages</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Enter</code></td>
+<td>Send message</td>
+</tr>
+<tr>
+<td><code>Option+Enter</code> (macOS)<br/><code>Alt+Enter</code> (Linux/Windows)</td>
+<td>Insert newline</td>
+</tr>
+<tr>
+<td><code>q</code> + <code>Enter</code></td>
+<td>Quit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="image-attachments">Image Attachments</h3>
+<p>Reference images using <code>@path</code> syntax:</p>
+<div class="highlight"><pre><span></span><code>@screenshot.png What does this show?
+@images/ Describe these images
+</code></pre></div>
+<ul>
+<li>Single file: <code>@path/to/image.png</code></li>
+<li>Directory: <code>@path/to/dir/</code> includes all images in directory, non-recursive</li>
+<li>Supported formats: PNG, JPG, JPEG, GIF, WEBP</li>
+<li>Tab completion available for paths</li>
+</ul>
+<p>Images are automatically downscaled if larger than 1024 pixels in either dimension.</p>
+<h3 id="approval-prompt">Approval Prompt</h3>
+<p>Before executing code actions or tool calls, the agent requests approval:</p>
+<div class="highlight"><pre><span></span><code>Approve? [Y/n/a/s]:
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Response</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Y</code> or <code>Enter</code></td>
+<td>Approve once</td>
+</tr>
+<tr>
+<td><code>n</code></td>
+<td>Reject once (ends the current agent turn)</td>
+</tr>
+<tr>
+<td><code>a</code></td>
+<td>Approve always (persists to <code>.freeact/permissions.json</code>)</td>
+</tr>
+<tr>
+<td><code>s</code></td>
+<td>Approve for current session</td>
+</tr>
+</tbody>
+</table>
+<p>See <a href="../sdk/#permissions-api">Permissions API</a> for details.</p>
 
 
 
@@ -1314,10 +1452,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.preview", "navigation.instant.progress", "navigation.top", "navigation.tracking", "search.suggest", "toc.follow", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.preview", "navigation.instant.progress", "navigation.top", "navigation.tracking", "search.suggest", "toc.follow", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
