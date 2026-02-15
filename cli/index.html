@@ -208,7 +208,7 @@
           
   
   
-  User Guide
+  Documentation
 
         </a>
       </li>
@@ -315,7 +315,7 @@
   <span class="md-ellipsis">
     
   
-    User Guide
+    Documentation
   
 
     
@@ -331,7 +331,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    User Guide
+    Documentation
   
 
           </label>
@@ -456,6 +456,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../execution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Execution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../sandbox/" class="md-nav__link">
         
   
@@ -491,7 +519,7 @@
   <span class="md-ellipsis">
     
   
-    Python SDK
+    Agent SDK
   
 
     
@@ -675,10 +703,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
         
           
-          <label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="">
+          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="">
             
   
   
@@ -696,8 +724,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_8">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_9">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -878,10 +906,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_10" >
         
           
-          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="">
+          <label class="md-nav__link" for="__nav_1_10" id="__nav_1_10_label" tabindex="">
             
   
   
@@ -899,8 +927,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_10">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1271,6 +1299,10 @@
 
 
 <h1 id="cli-tool">CLI tool</h1>
+<div class="admonition info">
+<p class="admonition-title">Work in progress</p>
+<p>The <a href="#interactive-mode">terminal interface</a> is preliminary and will be reimplemented in a future release.</p>
+</div>
 <p>The <code>freeact</code> or <code>freeact run</code> command starts the <a href="#interactive-mode">interactive mode</a>:</p>
 <div class="highlight"><pre><span></span><code>freeact
 </code></pre></div>
@@ -1293,6 +1325,10 @@
 <tr>
 <td><code>--sandbox-config PATH</code></td>
 <td>Path to sandbox configuration file.</td>
+</tr>
+<tr>
+<td><code>--session-id UUID</code></td>
+<td>Resume a previous session by its UUID. Generates a new UUID if omitted.</td>
 </tr>
 <tr>
 <td><code>--log-level LEVEL</code></td>
@@ -1318,6 +1354,9 @@
 </code></pre></div>
 <p>Running with a <a href="../sandbox/#custom-configuration">custom sandbox configuration</a>:</p>
 <div class="highlight"><pre><span></span><code>freeact<span class="w"> </span>--sandbox<span class="w"> </span>--sandbox-config<span class="w"> </span>sandbox-config.json
+</code></pre></div>
+<p>Resuming a previous <a href="../sdk/#persistence">session</a>:</p>
+<div class="highlight"><pre><span></span><code>freeact<span class="w"> </span>--session-id<span class="w"> </span>550e8400-e29b-41d4-a716-446655440000
 </code></pre></div>
 <p>Recording a session for documentation:</p>
 <div class="highlight"><pre><span></span><code>freeact<span class="w"> </span>--record<span class="w"> </span>--record-dir<span class="w"> </span>docs/recordings/demo<span class="w"> </span>--record-title<span class="w"> </span><span class="s2">&quot;Demo Session&quot;</span>

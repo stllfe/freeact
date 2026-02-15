@@ -208,7 +208,7 @@
           
   
   
-  User Guide
+  Documentation
 
         </a>
       </li>
@@ -315,7 +315,7 @@
   <span class="md-ellipsis">
     
   
-    User Guide
+    Documentation
   
 
     
@@ -331,7 +331,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    User Guide
+    Documentation
   
 
           </label>
@@ -510,10 +510,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#python-sdk" class="md-nav__link">
+  <a href="#agent-sdk" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Python SDK
+        Agent SDK
       
     </span>
   </a>
@@ -544,6 +544,34 @@
     
   
     Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../execution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Execution
   
 
     
@@ -599,7 +627,7 @@
   <span class="md-ellipsis">
     
   
-    Python SDK
+    Agent SDK
   
 
     
@@ -664,10 +692,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
         
           
-          <label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="">
+          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="">
             
   
   
@@ -685,8 +713,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_8">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_9">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -867,10 +895,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_10" >
         
           
-          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="">
+          <label class="md-nav__link" for="__nav_1_10" id="__nav_1_10_label" tabindex="">
             
   
   
@@ -888,8 +916,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_10">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1218,10 +1246,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#python-sdk" class="md-nav__link">
+  <a href="#agent-sdk" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Python SDK
+        Agent SDK
       
     </span>
   </a>
@@ -1249,7 +1277,7 @@
 
 
 <h1 id="quickstart">Quickstart</h1>
-<p>This guide shows how to run your first task with freeact.</p>
+<p>This guide shows how to run a simple task using the freeact <a href="#cli-tool">CLI tool</a> and the <a href="#agent-sdk">Agent SDK</a>.</p>
 <h2 id="cli-tool">CLI Tool</h2>
 <p>Freeact provides a <a href="../cli/">CLI tool</a> for running the agent in a terminal. </p>
 <h3 id="starting-freeact">Starting Freeact</h3>
@@ -1260,10 +1288,10 @@ uvx<span class="w"> </span>freeact
 </code></pre></div>
 <p>See <a href="../installation/">Installation</a> for alternative setup options and sandbox mode prerequisites.</p>
 <h3 id="generating-mcp-tool-apis">Generating MCP Tool APIs</h3>
-<p>On first start, the CLI tool auto-generates Python APIs for <a href="../configuration/#ptc-servers">configured</a> MCP servers. For example, it creates <code>mcptools/google/web_search.py</code> for the <code>web_search</code> tool of the bundled <code>google</code> MCP server. With the generated Python API, the agent can import and call this tool programmatically. </p>
+<p>On first start, the CLI tool auto-generates Python APIs for <a href="../configuration/#ptc-servers">configured</a> MCP servers. For example, it creates <code>.freeact/generated/mcptools/google/web_search.py</code> for the <code>web_search</code> tool of the bundled <code>google</code> MCP server. With the generated Python API, the agent can import and call this tool programmatically.</p>
 <div class="admonition tip">
 <p class="admonition-title">Custom MCP servers</p>
-<p>For calling the tools of your own MCP servers programmatically, add them to the <a href="../configuration/#ptc-servers"><code>ptc-servers</code></a> section in <code>.freeact/servers.json</code>. Freeact auto-generates a Python API for them when the CLI tool starts.</p>
+<p>For calling the tools of your own MCP servers programmatically, add them to the <a href="../configuration/#ptc-servers"><code>ptc-servers</code></a> section in <code>.freeact/config.json</code>. Freeact auto-generates a Python API for them when the CLI tool starts.</p>
 </div>
 <h3 id="running-a-task">Running a Task</h3>
 <p>With this setup and a question like </p>
@@ -1279,10 +1307,9 @@ uvx<span class="w"> </span>freeact
 <li><strong>Action approval</strong>: The code action and the programmatic <code>web_search</code> tool call are explicitly approved by the user, other tool calls were <a href="../configuration/#permissions">pre-approved</a> for this example.</li>
 </ul>
 <p>The code execution output shows the search result with source URLs. The agent response is a summary of it.</p>
-<h2 id="python-sdk">Python SDK</h2>
-<p>The CLI tool is built on a <a href="../sdk/">Python SDK</a> that you can use directly in your applications. The following minimal example shows how to run the same task programmatically, with code actions and tool calls auto-approved:</p>
+<h2 id="agent-sdk">Agent SDK</h2>
+<p>The CLI tool is built on the <a href="../sdk/">Agent SDK</a> that you can use directly in your applications. The following minimal example shows how to run the same task programmatically, with code actions and tool calls auto-approved:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">freeact.agent</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
     <span class="n">Agent</span><span class="p">,</span>
@@ -1293,30 +1320,25 @@ uvx<span class="w"> </span>freeact
     <span class="n">ToolOutput</span><span class="p">,</span>
 <span class="p">)</span>
 
-<span class="kn">from</span><span class="w"> </span><span class="nn">freeact.agent.config</span><span class="w"> </span><span class="kn">import</span> <span class="n">Config</span><span class="p">,</span> <span class="n">init_config</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">freeact.agent.config</span><span class="w"> </span><span class="kn">import</span> <span class="n">Config</span>
 
-<span class="kn">from</span><span class="w"> </span><span class="nn">freeact.agent.tools.pytools.apigen</span><span class="w"> </span><span class="kn">import</span> <span class="n">generate_mcp_sources</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">freeact.tools.pytools.apigen</span><span class="w"> </span><span class="kn">import</span> <span class="n">generate_mcp_sources</span>
 
 
 
 <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="c1"># Initialize .freeact/ config directory if needed</span>
-    <span class="n">init_config</span><span class="p">()</span>
+    <span class="c1"># Scaffold .freeact/ config directory if needed</span>
+    <span class="k">await</span> <span class="n">Config</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
 
     <span class="c1"># Load configuration from .freeact/</span>
     <span class="n">config</span> <span class="o">=</span> <span class="n">Config</span><span class="p">()</span>
 
     <span class="c1"># Generate Python APIs for MCP servers in ptc_servers</span>
     <span class="k">for</span> <span class="n">server_name</span><span class="p">,</span> <span class="n">params</span> <span class="ow">in</span> <span class="n">config</span><span class="o">.</span><span class="n">ptc_servers</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">Path</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;mcptools/</span><span class="si">{</span><span class="n">server_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
-            <span class="k">await</span> <span class="n">generate_mcp_sources</span><span class="p">({</span><span class="n">server_name</span><span class="p">:</span> <span class="n">params</span><span class="p">})</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">generated_dir</span> <span class="o">/</span> <span class="s2">&quot;mcptools&quot;</span> <span class="o">/</span> <span class="n">server_name</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="k">await</span> <span class="n">generate_mcp_sources</span><span class="p">({</span><span class="n">server_name</span><span class="p">:</span> <span class="n">params</span><span class="p">},</span> <span class="n">config</span><span class="o">.</span><span class="n">generated_dir</span><span class="p">)</span>
 
-    <span class="k">async</span> <span class="k">with</span> <span class="n">Agent</span><span class="p">(</span>
-        <span class="n">model</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">model</span><span class="p">,</span>
-        <span class="n">model_settings</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">model_settings</span><span class="p">,</span>
-        <span class="n">system_prompt</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">system_prompt</span><span class="p">,</span>
-        <span class="n">mcp_servers</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">mcp_servers</span><span class="p">,</span>
-    <span class="p">)</span> <span class="k">as</span> <span class="n">agent</span><span class="p">:</span>
+    <span class="k">async</span> <span class="k">with</span> <span class="n">Agent</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span> <span class="k">as</span> <span class="n">agent</span><span class="p">:</span>
         <span class="n">prompt</span> <span class="o">=</span> <span class="s2">&quot;Who is the F1 world champion 2025?&quot;</span>
 
         <span class="k">async</span> <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">agent</span><span class="o">.</span><span class="n">stream</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span>

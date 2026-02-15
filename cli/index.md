@@ -1,5 +1,9 @@
 # CLI tool
 
+Work in progress
+
+The [terminal interface](#interactive-mode) is preliminary and will be reimplemented in a future release.
+
 The `freeact` or `freeact run` command starts the [interactive mode](#interactive-mode):
 
 ```
@@ -18,6 +22,7 @@ freeact init
 | ----------------------- | -------------------------------------------------------------------------------------------- |
 | `--sandbox`             | Run code execution in [sandbox mode](https://gradion-ai.github.io/freeact/sandbox/index.md). |
 | `--sandbox-config PATH` | Path to sandbox configuration file.                                                          |
+| `--session-id UUID`     | Resume a previous session by its UUID. Generates a new UUID if omitted.                      |
 | `--log-level LEVEL`     | Set logging level: `debug`, `info` (default), `warning`, `error`, `critical`.                |
 | `--record`              | Record the conversation as SVG and HTML files.                                               |
 | `--record-dir PATH`     | Output directory for recordings (default: `output`).                                         |
@@ -35,6 +40,12 @@ Running with a [custom sandbox configuration](https://gradion-ai.github.io/freea
 
 ```
 freeact --sandbox --sandbox-config sandbox-config.json
+```
+
+Resuming a previous [session](https://gradion-ai.github.io/freeact/sdk/#persistence):
+
+```
+freeact --session-id 550e8400-e29b-41d4-a716-446655440000
 ```
 
 Recording a session for documentation:

@@ -208,7 +208,7 @@
           
   
   
-  User Guide
+  Documentation
 
         </a>
       </li>
@@ -315,7 +315,7 @@
   <span class="md-ellipsis">
     
   
-    User Guide
+    Documentation
   
 
     
@@ -331,7 +331,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    User Guide
+    Documentation
   
 
           </label>
@@ -456,6 +456,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../execution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Execution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../sandbox/" class="md-nav__link">
         
   
@@ -491,7 +519,7 @@
   <span class="md-ellipsis">
     
   
-    Python SDK
+    Agent SDK
   
 
     
@@ -558,10 +586,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" checked>
         
           
-          <label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="">
+          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="">
             
   
   
@@ -579,8 +607,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_8_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_1_8">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_9">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -830,10 +858,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_10" >
         
           
-          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="">
+          <label class="md-nav__link" for="__nav_1_10" id="__nav_1_10_label" tabindex="">
             
   
   
@@ -851,8 +879,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_10">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1190,20 +1218,20 @@
 <p>get the latest 5 commits of the 3 github repos of torvalds with the most stars. For each repo, output name, stars and the first line of commit messages, and the link to the commit</p>
 </blockquote>
 <p>the agent discovers <code>search_repositories</code> and <code>list_commits</code> as appropriate tools and inspects their APIs. Because the enhanced <code>search_repositories</code> tool now returns typed output via <code>run_parsed()</code>, the agent can compose these tools in a single code action, passing repository names from search results as input to <code>list_commits</code><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
-<p>After code action execution, we instruct the agent to save it as a reusable tool:</p>
+<p>After code action execution, the agent is instructed to save it as a reusable tool:</p>
 <blockquote>
 <p>save this as tool under category github, with username, top_n_repos, top_n_commits as parameter</p>
 </blockquote>
 <p>The agent:</p>
 <ol>
 <li>Loads the <code>saving-codeacts</code> skill</li>
-<li>Creates a <code>gentools/github/commits_of_top_repos/</code> package</li>
+<li>Creates a <code>gentools/github/commits_of_top_repos/</code> package under <code>.freeact/generated/</code></li>
 <li>Saves the tool API with a parameterized <code>run()</code> function to <a href="https://github.com/gradion-ai/ipybox/blob/main/docs/generated/gentools/github/commits_of_top_repos/api.py"><code>api.py</code></a></li>
 <li>Saves the implementation to <a href="https://github.com/gradion-ai/ipybox/blob/main/docs/generated/gentools/github/commits_of_top_repos/impl.py"><code>impl.py</code></a>, lazily imported by <code>run()</code></li>
 <li>Tests the saved tool to verify it works</li>
 </ol>
 <p>The structure of the saved tool is:</p>
-<div class="highlight"><pre><span></span><code>gentools/
+<div class="highlight"><pre><span></span><code>.freeact/generated/gentools/
 └── github/
     └── commits_of_top_repos/
         ├── __init__.py

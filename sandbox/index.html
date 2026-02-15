@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://gradion-ai.github.io/freeact/sandbox/">
       
       
-        <link rel="prev" href="../configuration/">
+        <link rel="prev" href="../execution/">
       
       
         <link rel="next" href="../sdk/">
@@ -208,7 +208,7 @@
           
   
   
-  User Guide
+  Documentation
 
         </a>
       </li>
@@ -315,7 +315,7 @@
   <span class="md-ellipsis">
     
   
-    User Guide
+    Documentation
   
 
     
@@ -331,7 +331,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    User Guide
+    Documentation
   
 
           </label>
@@ -453,6 +453,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../execution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Execution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -539,10 +567,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#python-sdk" class="md-nav__link">
+  <a href="#agent-sdk" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Python SDK
+        Agent SDK
       
     </span>
   </a>
@@ -638,7 +666,7 @@
   <span class="md-ellipsis">
     
   
-    Python SDK
+    Agent SDK
   
 
     
@@ -703,10 +731,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
         
           
-          <label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="">
+          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="">
             
   
   
@@ -724,8 +752,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_8">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_9">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -906,10 +934,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_10" >
         
           
-          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="">
+          <label class="md-nav__link" for="__nav_1_10" id="__nav_1_10_label" tabindex="">
             
   
   
@@ -927,8 +955,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_10">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1230,10 +1258,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#python-sdk" class="md-nav__link">
+  <a href="#agent-sdk" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Python SDK
+        Agent SDK
       
     </span>
   </a>
@@ -1327,24 +1355,29 @@
 
 
 <h1 id="sandbox-mode">Sandbox Mode</h1>
-<p>Freeact can restrict filesystem and network access for code execution and MCP servers using <a href="https://gradion-ai.github.io/ipybox/sandbox/">ipybox sandbox</a> and Anthropic's <a href="https://github.com/anthropic-experimental/sandbox-runtime">sandbox-runtime</a>.</p>
+<p>Freeact can restrict filesystem and network access for <a href="../execution/">code execution</a> and MCP servers using <a href="https://gradion-ai.github.io/ipybox/sandbox/">ipybox sandbox</a> and Anthropic's <a href="https://github.com/anthropic-experimental/sandbox-runtime">sandbox-runtime</a>.</p>
 <div class="admonition hint">
 <p class="admonition-title">Prerequisites</p>
 <p>Check the installation instructions for <a href="../installation/#sandbox-mode-prerequisites">sandbox mode prerequisites</a>.</p>
 </div>
 <h2 id="code-execution">Code Execution</h2>
+<div class="admonition info">
+<p class="admonition-title">Scope</p>
+<p>Sandbox restrictions apply equally to Python code and shell commands, as both <a href="../execution/">execute</a> in the same IPython kernel.</p>
+</div>
 <h3 id="cli-tool">CLI Tool</h3>
-<p>The <code>--sandbox</code> option enables sandboxed code execution:</p>
+<p>The <code>--sandbox</code> option enables sandboxed <a href="../execution/">code execution</a>:</p>
 <div class="highlight"><pre><span></span><code>freeact<span class="w"> </span>--sandbox
 </code></pre></div>
 <p>A custom configuration file can override the <a href="#default-restrictions">default restrictions</a>:</p>
 <div class="highlight"><pre><span></span><code>freeact<span class="w"> </span>--sandbox<span class="w"> </span>--sandbox-config<span class="w"> </span>sandbox-config.json
 </code></pre></div>
-<h3 id="python-sdk">Python SDK</h3>
+<h3 id="agent-sdk">Agent SDK</h3>
 <p>The <code>sandbox</code> and <code>sandbox_config</code> parameters of the <a class="autorefs autorefs-internal" href="../api/agent/#freeact.agent.Agent"><code>Agent</code></a> constructor provide the same functionality:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
 
 <span class="n">agent</span> <span class="o">=</span> <span class="n">Agent</span><span class="p">(</span>
+    <span class="s2">&quot;main&quot;</span><span class="p">,</span>
     <span class="o">...</span>
     <span class="n">sandbox</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">sandbox_config</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;sandbox-config.json&quot;</span><span class="p">),</span>
@@ -1372,10 +1405,10 @@
 </code></pre></div>
 <p>This macOS-specific example configuration allows additional network access to <code>example.org</code>. Filesystem settings permit writes to <code>~/Library/Jupyter/</code> and <code>~/.ipython/</code>, which is required for running a sandboxed IPython kernel. The sandbox configuration file itself is protected from reads and writes.</p>
 <h2 id="mcp-servers">MCP Servers</h2>
-<p>MCP servers run as separate processes and are not affected by <a href="#code-execution">code execution sandboxing</a>. Local stdio servers can be sandboxed independently by wrapping the server command with the <code>srt</code> tool from sandbox-runtime. This applies to both <code>mcp-servers</code> and <code>ptc-servers</code> in the <a href="../configuration/#mcp-server-configuration">MCP server configuration</a>.</p>
+<p>MCP servers run as separate processes and are not affected by <a href="#code-execution">code execution sandboxing</a>. Local stdio servers can be sandboxed independently by wrapping the server command with the <code>srt</code> tool from sandbox-runtime. This applies to both <a href="../configuration/#mcp-servers"><code>mcp-servers</code></a> and <a href="../configuration/#ptc-servers"><code>ptc-servers</code></a> in the <a href="../configuration/#configuration-file">configuration file</a>.</p>
 <h3 id="filesystem-mcp-server">Filesystem MCP Server</h3>
 <p>This example shows a sandboxed <a href="https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem">filesystem MCP server</a> in the <code>mcp-servers</code> section:</p>
-<div class="highlight"><span class="filename">.freeact/servers.json</span><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">.freeact/config.json</span><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;mcp-servers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;filesystem&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;srt&quot;</span><span class="p">,</span>
@@ -1407,7 +1440,7 @@
 uv<span class="w"> </span>add<span class="w"> </span><span class="s2">&quot;httpx[socks]&gt;=0.28.1&quot;</span>
 </code></pre></div>
 <p>Then add it to the <code>ptc-servers</code> section:</p>
-<div class="highlight"><span class="filename">.freeact/servers.json</span><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">.freeact/config.json</span><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;ptc-servers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;fetch&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;srt&quot;</span><span class="p">,</span>

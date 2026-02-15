@@ -10,29 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://gradion-ai.github.io/freeact/api/permissions/">
+        <link rel="canonical" href="https://gradion-ai.github.io/freeact/execution/">
       
       
-        <link rel="prev" href="../generate/">
+        <link rel="prev" href="../configuration/">
       
+      
+        <link rel="next" href="../sandbox/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Permissions - freeact</title>
+        <title>Code Execution - freeact</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,11 +53,11 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#freeact.permissions.PermissionManager" class="md-skip">
+        <a href="#code-execution" class="md-skip">
           Skip to content
         </a>
       
@@ -92,9 +94,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="freeact" class="md-header__button md-logo" aria-label="freeact" data-md-component="logo">
+    <a href=".." title="freeact" class="md-header__button md-logo" aria-label="freeact" data-md-component="logo">
       
-  <img src="../../images/logo.png" alt="logo">
+  <img src="../images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -111,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Permissions
+              Code Execution
             
           </span>
         </div>
@@ -196,11 +198,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../.." class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href=".." class="md-tabs__link">
           
   
   
@@ -216,13 +220,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../agent/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../api/agent/" class="md-tabs__link">
           
   
   
@@ -256,9 +258,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="freeact" class="md-nav__button md-logo" aria-label="freeact" data-md-component="logo">
+    <a href=".." title="freeact" class="md-nav__button md-logo" aria-label="freeact" data-md-component="logo">
       
-  <img src="../../images/logo.png" alt="logo">
+  <img src="../images/logo.png" alt="logo">
 
     </a>
     freeact
@@ -282,26 +284,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
             
   
   
@@ -319,7 +326,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -337,7 +344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -365,7 +372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installation/" class="md-nav__link">
+      <a href="../installation/" class="md-nav__link">
         
   
   
@@ -393,7 +400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../quickstart/" class="md-nav__link">
+      <a href="../quickstart/" class="md-nav__link">
         
   
   
@@ -421,7 +428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/" class="md-nav__link">
+      <a href="../configuration/" class="md-nav__link">
         
   
   
@@ -446,10 +453,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../execution/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Execution
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -465,6 +499,59 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#python-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python Code
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shell Commands
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mixing-both" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mixing Both
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -477,7 +564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sandbox/" class="md-nav__link">
+      <a href="../sandbox/" class="md-nav__link">
         
   
   
@@ -505,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sdk/" class="md-nav__link">
+      <a href="../sdk/" class="md-nav__link">
         
   
   
@@ -533,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cli/" class="md-nav__link">
+      <a href="../cli/" class="md-nav__link">
         
   
   
@@ -567,17 +654,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
         
           
-          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="">
             
   
   
@@ -613,7 +703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/output-parser/" class="md-nav__link">
+      <a href="../examples/output-parser/" class="md-nav__link">
         
   
   
@@ -641,7 +731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/saving-codeacts/" class="md-nav__link">
+      <a href="../examples/saving-codeacts/" class="md-nav__link">
         
   
   
@@ -669,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/agent-skills/" class="md-nav__link">
+      <a href="../examples/agent-skills/" class="md-nav__link">
         
   
   
@@ -697,7 +787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/sandbox-mode/" class="md-nav__link">
+      <a href="../examples/sandbox-mode/" class="md-nav__link">
         
   
   
@@ -725,7 +815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/python-packages/" class="md-nav__link">
+      <a href="../examples/python-packages/" class="md-nav__link">
         
   
   
@@ -767,17 +857,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_10" >
         
           
-          <label class="md-nav__link" for="__nav_1_10" id="__nav_1_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_10" id="__nav_1_10_label" tabindex="">
             
   
   
@@ -813,7 +906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../llms.txt" class="md-nav__link">
+      <a href="../llms.txt" class="md-nav__link">
         
   
   
@@ -841,7 +934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../llms-full.txt" class="md-nav__link">
+      <a href="../llms-full.txt" class="md-nav__link">
         
   
   
@@ -881,31 +974,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
@@ -923,7 +1011,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -941,7 +1029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../agent/" class="md-nav__link">
+      <a href="../api/agent/" class="md-nav__link">
         
   
   
@@ -969,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/" class="md-nav__link">
+      <a href="../api/config/" class="md-nav__link">
         
   
   
@@ -997,7 +1085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../generate/" class="md-nav__link">
+      <a href="../api/generate/" class="md-nav__link">
         
   
   
@@ -1022,35 +1110,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Permissions
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../api/permissions/" class="md-nav__link">
         
   
   
@@ -1066,96 +1129,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#freeact.permissions.PermissionManager" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PermissionManager
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="PermissionManager">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#freeact.permissions.PermissionManager.allow_always" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        allow_always
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#freeact.permissions.PermissionManager.allow_session" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        allow_session
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#freeact.permissions.PermissionManager.is_allowed" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        is_allowed
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#freeact.permissions.PermissionManager.load" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        load
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#freeact.permissions.PermissionManager.save" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        save
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1185,6 +1158,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1193,74 +1168,35 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#freeact.permissions.PermissionManager" class="md-nav__link">
+  <a href="#python-code" class="md-nav__link">
     <span class="md-ellipsis">
       
-        PermissionManager
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="PermissionManager">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#freeact.permissions.PermissionManager.allow_always" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        allow_always
+        Python Code
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#freeact.permissions.PermissionManager.allow_session" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#shell-commands" class="md-nav__link">
     <span class="md-ellipsis">
       
-        allow_session
+        Shell Commands
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#freeact.permissions.PermissionManager.is_allowed" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#mixing-both" class="md-nav__link">
     <span class="md-ellipsis">
       
-        is_allowed
+        Mixing Both
       
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#freeact.permissions.PermissionManager.load" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        load
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#freeact.permissions.PermissionManager.save" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        save
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1284,173 +1220,47 @@
   
 
 
-  <h1>Permissions</h1>
-
-<div class="doc doc-object doc-class">
-
-
-
-<h2 id="freeact.permissions.PermissionManager" class="doc doc-heading">
-            <span class="doc doc-object-name doc-class-name">freeact.permissions.PermissionManager</span>
-
-
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">PermissionManager</span><span class="p">(</span><span class="n">freeact_dir</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></span> <span class="o">=</span> <span class="n"><a class="autorefs autorefs-external" title="pathlib.Path" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Path</a></span><span class="p">(</span><span class="s1">&#39;.freeact&#39;</span><span class="p">))</span>
+<h1 id="code-execution">Code Execution</h1>
+<p>Freeact executes Python code and shell commands in an IPython kernel provided by <a href="https://github.com/gradion-ai/ipybox">ipybox</a>. Both run through the same <code>ipybox_execute_ipython_cell</code> <a href="../sdk/#internal-tools">internal tool</a>, and the kernel is stateful: variables, imports, and function definitions persist across executions within a session.</p>
+<p>Python code and shell commands share the same kernel, but shell commands use the <code>!</code> prefix (e.g., <code>!ls</code>, <code>!git status</code>, <code>!uv pip install</code>). The bundled <a href="https://github.com/gradion-ai/freeact/tree/main/freeact/agent/config/prompts">system prompts</a> provide initial guidance on when to use shell commands versus Python code. More detailed guidance can be given in custom <a href="../configuration/#skills">agent skills</a>.</p>
+<h2 id="python-code">Python Code</h2>
+<p>Given a prompt like <em>"what is 17 raised to the power of 0.13"</em>, the agent generates and executes Python code directly:</p>
+<p><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="mi">17</span> <span class="o">**</span> <span class="mf">0.13</span><span class="p">)</span>
 </code></pre></div>
-
-    <div class="doc doc-contents first">
-
-
-
-        <p>Tool permission gating with two-tier approval: always-allowed (persisted)
-and session-only (in-memory).</p>
-<p>Filesystem tools targeting paths within <code>.freeact/</code> are auto-approved
-without explicit permission grants.</p>
-
-
-
-
-
-
-
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-<div class="doc doc-object doc-function">
-
-
-<h3 id="freeact.permissions.PermissionManager.allow_always" class="doc doc-heading">
-            <span class="doc doc-object-name doc-function-name">allow_always</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-async"><code>async</code></small>
-  </span>
-
-</h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">allow_always</span><span class="p">(</span><span class="n">tool_name</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<div class="highlight"><pre><span></span><code>1.4453011884051326
+</code></pre></div></p>
+<h2 id="shell-commands">Shell Commands</h2>
+<p>Given a prompt like <em>"which .py files in tests/ contain ipybox"</em>, the agent uses a shell command with the <code>!</code> prefix:</p>
+<p><div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">grep</span> <span class="o">-</span><span class="n">r</span> <span class="s2">&quot;ipybox&quot;</span> <span class="n">tests</span><span class="o">/</span> <span class="o">--</span><span class="n">include</span><span class="o">=</span><span class="s2">&quot;*.py&quot;</span> <span class="o">-</span><span class="n">l</span>
 </code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>Grant permanent permission for a tool and persist to disk.</p>
-
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-<h3 id="freeact.permissions.PermissionManager.allow_session" class="doc doc-heading">
-            <span class="doc doc-object-name doc-function-name">allow_session</span>
-
-
-</h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">allow_session</span><span class="p">(</span><span class="n">tool_name</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<div class="highlight"><pre><span></span><code>tests/unit/test_agent.py
+tests/conftest.py
+tests/integration/test_agent.py
+tests/integration/test_subagents.py
+</code></pre></div></p>
+<p>Each <code>!</code> line spawns a separate subprocess. Multi-line shell scripts can use the <code>%%bash</code> cell magic, which runs as a single subprocess:</p>
+<div class="highlight"><pre><span></span><code><span class="o">%%</span><span class="n">bash</span>
+<span class="n">cd</span> <span class="o">/</span><span class="n">tmp</span>
+<span class="n">echo</span> <span class="s2">&quot;Now in $(pwd)&quot;</span>
+<span class="n">ls</span> <span class="o">-</span><span class="n">la</span>
 </code></pre></div>
+<p>Shell state (working directory, variables) does not persist across <code>!</code> lines but persists within a <code>%%bash</code> block. Neither carries state to the next cell execution.</p>
+<h2 id="mixing-both">Mixing Both</h2>
+<p>Python and shell commands can be freely combined within a single code action. A common pattern is installing a package and using it immediately:</p>
+<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">uv</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pandas</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
-    <div class="doc doc-contents ">
-
-        <p>Grant permission for a tool until the session ends (not persisted).</p>
-
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-<h3 id="freeact.permissions.PermissionManager.is_allowed" class="doc doc-heading">
-            <span class="doc doc-object-name doc-function-name">is_allowed</span>
-
-
-</h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">is_allowed</span><span class="p">(</span>
-    <span class="n">tool_name</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">,</span> <span class="n">tool_args</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/reference/expressions.html#dict">dict</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data.csv&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
 </code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>Check if a tool call is pre-approved.</p>
-<p>Returns <code>True</code> if the tool is in the always-allowed or session-allowed
-set, or if it's a filesystem tool operating within <code>.freeact/</code>.</p>
-
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-<h3 id="freeact.permissions.PermissionManager.load" class="doc doc-heading">
-            <span class="doc doc-object-name doc-function-name">load</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-async"><code>async</code></small>
-  </span>
-
-</h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">load</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<p>Shell output can be captured into Python variables:</p>
+<div class="highlight"><pre><span></span><code><span class="n">files</span> <span class="o">=</span> <span class="err">!</span><span class="n">ls</span> <span class="o">/</span><span class="n">data</span><span class="o">/*.</span><span class="n">csv</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">files</span><span class="p">)</span><span class="si">}</span><span class="s2"> CSV files&quot;</span><span class="p">)</span>
 </code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>Load always-allowed tools from <code>.freeact/permissions.json</code>.</p>
-
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-<h3 id="freeact.permissions.PermissionManager.save" class="doc doc-heading">
-            <span class="doc doc-object-name doc-function-name">save</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-async"><code>async</code></small>
-  </span>
-
-</h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">save</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<p>Python variables can be interpolated into shell commands:</p>
+<div class="highlight"><pre><span></span><code><span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;report.pdf&quot;</span>
+<span class="err">!</span><span class="n">cp</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="p">{</span><span class="n">filename</span><span class="p">}</span> <span class="o">/</span><span class="n">output</span><span class="o">/</span>
 </code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>Persist always-allowed tools to <code>.freeact/permissions.json</code>.</p>
-
-
-    </div>
-
-</div>
-
-
-
-  </div>
-
-    </div>
-
-</div>
 
 
 
@@ -1512,10 +1322,10 @@ set, or if it's a filesystem tool operating within <code>.freeact/</code>.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.preview", "navigation.instant.progress", "navigation.top", "navigation.tracking", "search.suggest", "toc.follow", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.preview", "navigation.instant.progress", "navigation.top", "navigation.tracking", "search.suggest", "toc.follow", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

@@ -2,14 +2,11 @@
 
 ```
 Agent(
-    model: str | Model,
-    model_settings: ModelSettings,
-    system_prompt: str,
-    mcp_servers: dict[str, MCPServer] | None = None,
-    kernel_env: dict[str, str] | None = None,
+    config: Config,
+    agent_id: str | None = None,
     sandbox: bool = False,
     sandbox_config: Path | None = None,
-    images_dir: Path | None = None,
+    session_store: SessionStore | None = None,
 )
 ```
 
@@ -28,16 +25,12 @@ Initialize the agent.
 
 Parameters:
 
-| Name             | Type                   | Description                                      | Default                                             |
-| ---------------- | ---------------------- | ------------------------------------------------ | --------------------------------------------------- |
-| `model`          | \`str                  | Model\`                                          | LLM model identifier or pydantic-ai Model instance. |
-| `model_settings` | `ModelSettings`        | Temperature, max tokens, and other model params. | *required*                                          |
-| `system_prompt`  | `str`                  | Instructions defining agent behavior.            | *required*                                          |
-| `mcp_servers`    | \`dict[str, MCPServer] | None\`                                           | Named MCP servers for JSON-based tool calls.        |
-| `kernel_env`     | \`dict[str, str]       | None\`                                           | Environment variables passed to the IPython kernel. |
-| `sandbox`        | `bool`                 | Run the kernel in sandbox mode.                  | `False`                                             |
-| `sandbox_config` | \`Path                 | None\`                                           | Path to custom sandbox configuration.               |
-| `images_dir`     | \`Path                 | None\`                                           | Directory for saving generated images.              |
+| Name             | Type     | Description                                                                                                    | Default                                                                   |
+| ---------------- | -------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `config`         | `Config` | Agent configuration containing model, system prompt, MCP servers, kernel env, timeouts, and subagent settings. | *required*                                                                |
+| `agent_id`       | \`str    | None\`                                                                                                         | Identifier for this agent instance. Defaults to "main" when not provided. |
+| `sandbox`        | `bool`   | Run the kernel in sandbox mode.                                                                                | `False`                                                                   |
+| `sandbox_config` | \`Path   | None\`                                                                                                         | Path to custom sandbox configuration.                                     |
 
 ### start
 
@@ -64,16 +57,8 @@ Automatically called when exiting the async context manager.
 ```
 stream(
     prompt: str | Sequence[UserContent],
-) -> AsyncIterator[
-    ApprovalRequest
-    | ToolOutput
-    | CodeExecutionOutputChunk
-    | CodeExecutionOutput
-    | ThoughtsChunk
-    | Thoughts
-    | ResponseChunk
-    | Response
-]
+    max_turns: int | None = None,
+) -> AsyncIterator[AgentEvent]
 ```
 
 Run a full agentic turn, yielding events as they occur.
@@ -82,15 +67,26 @@ Loops through model responses and tool executions until the model produces a res
 
 Parameters:
 
-| Name     | Type  | Description             | Default                                              |
-| -------- | ----- | ----------------------- | ---------------------------------------------------- |
-| `prompt` | \`str | Sequence[UserContent]\` | User message as text or multimodal content sequence. |
+| Name        | Type  | Description             | Default                                                                                                                                                         |
+| ----------- | ----- | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `prompt`    | \`str | Sequence[UserContent]\` | User message as text or multimodal content sequence.                                                                                                            |
+| `max_turns` | \`int | None\`                  | Maximum number of tool-execution rounds. Each round consists of a model response followed by tool execution. If None, runs until the model stops calling tools. |
 
 Returns:
 
-| Type                             | Description |
-| -------------------------------- | ----------- |
-| \`AsyncIterator\[ApprovalRequest | ToolOutput  |
+| Type                        | Description              |
+| --------------------------- | ------------------------ |
+| `AsyncIterator[AgentEvent]` | An async event iterator. |
+
+## freeact.agent.AgentEvent
+
+```
+AgentEvent(*, agent_id: str = '')
+```
+
+Base class for all agent stream events.
+
+Carries the `agent_id` of the agent that produced the event, allowing callers to distinguish events from a parent agent vs. its subagents.
 
 ## freeact.agent.ApprovalRequest
 
@@ -99,8 +95,12 @@ ApprovalRequest(
     tool_name: str,
     tool_args: dict[str, Any],
     _future: Future[bool] = Future(),
+    *,
+    agent_id: str = ""
 )
 ```
+
+Bases: `AgentEvent`
 
 Pending tool execution awaiting user approval.
 
@@ -131,55 +131,125 @@ Await until `approve()` is called and return the decision.
 ## freeact.agent.Response
 
 ```
-Response(content: str)
+Response(content: str, *, agent_id: str = '')
 ```
+
+Bases: `AgentEvent`
 
 Complete model text response after streaming finishes.
 
 ## freeact.agent.ResponseChunk
 
 ```
-ResponseChunk(content: str)
+ResponseChunk(content: str, *, agent_id: str = '')
 ```
+
+Bases: `AgentEvent`
 
 Partial text from an in-progress model response.
 
 ## freeact.agent.Thoughts
 
 ```
-Thoughts(content: str)
+Thoughts(content: str, *, agent_id: str = '')
 ```
+
+Bases: `AgentEvent`
 
 Complete model thoughts after streaming finishes.
 
 ## freeact.agent.ThoughtsChunk
 
 ```
-ThoughtsChunk(content: str)
+ThoughtsChunk(content: str, *, agent_id: str = '')
 ```
+
+Bases: `AgentEvent`
 
 Partial text from model's extended thinking.
 
 ## freeact.agent.CodeExecutionOutput
 
 ```
-CodeExecutionOutput(text: str | None, images: list[Path])
+CodeExecutionOutput(
+    text: str | None,
+    images: list[Path],
+    *,
+    agent_id: str = ""
+)
 ```
+
+Bases: `AgentEvent`
 
 Complete result from Python code execution in the ipybox kernel.
 
 ## freeact.agent.CodeExecutionOutputChunk
 
 ```
-CodeExecutionOutputChunk(text: str)
+CodeExecutionOutputChunk(text: str, *, agent_id: str = '')
 ```
+
+Bases: `AgentEvent`
 
 Partial output from an in-progress code execution.
 
 ## freeact.agent.ToolOutput
 
 ```
-ToolOutput(content: ToolResult)
+ToolOutput(content: ToolResult, *, agent_id: str = '')
 ```
 
-Result from a JSON-based MCP tool call.
+Bases: `AgentEvent`
+
+Result from a tool or built-in agent operation.
+
+## freeact.agent.store.SessionStore
+
+```
+SessionStore(
+    sessions_root: Path,
+    session_id: str,
+    flush_after_append: bool = False,
+)
+```
+
+Persist and restore per-agent pydantic-ai message history as JSONL.
+
+### append
+
+```
+append(agent_id: str, messages: list[ModelMessage]) -> None
+```
+
+Append serialized messages to an agent-specific session log.
+
+Each message is written as a versioned JSONL envelope with a UTC timestamp. The session file is created on demand.
+
+Parameters:
+
+| Name       | Type                 | Description                                                                                     | Default    |
+| ---------- | -------------------- | ----------------------------------------------------------------------------------------------- | ---------- |
+| `agent_id` | `str`                | Logical agent stream name (for example, "main" or "sub-1234"), used as the JSONL filename stem. | *required* |
+| `messages` | `list[ModelMessage]` | Messages to append in order.                                                                    | *required* |
+
+### load
+
+```
+load(agent_id: str) -> list[ModelMessage]
+```
+
+Load and validate all persisted messages for an agent.
+
+Returns an empty list when no session file exists. If the final line is truncated (for example from an interrupted write), that line is ignored. Earlier malformed lines raise `ValueError`.
+
+Parameters:
+
+| Name       | Type  | Description                                              | Default    |
+| ---------- | ----- | -------------------------------------------------------- | ---------- |
+| `agent_id` | `str` | Logical agent stream name used to locate the JSONL file. | *required* |
+
+Returns:
+
+| Type                 | Description                                   |
+| -------------------- | --------------------------------------------- |
+| `list[ModelMessage]` | Deserialized message history in append order. |

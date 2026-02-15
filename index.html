@@ -206,7 +206,7 @@
           
   
   
-  User Guide
+  Documentation
 
         </a>
       </li>
@@ -313,7 +313,7 @@
   <span class="md-ellipsis">
     
   
-    User Guide
+    Documentation
   
 
     
@@ -329,7 +329,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    User Guide
+    Documentation
   
 
           </label>
@@ -402,10 +402,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#interfaces" class="md-nav__link">
+  <a href="#usage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Interfaces
+        Usage
       
     </span>
   </a>
@@ -413,21 +413,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
+  <a href="#capabilities" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Features
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#beyond-task-execution" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Beyond task execution
+        Capabilities
       
     </span>
   </a>
@@ -534,6 +523,34 @@
   
   
     <li class="md-nav__item">
+      <a href="execution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Execution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="sandbox/" class="md-nav__link">
         
   
@@ -569,7 +586,7 @@
   <span class="md-ellipsis">
     
   
-    Python SDK
+    Agent SDK
   
 
     
@@ -634,10 +651,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
         
           
-          <label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="">
+          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="">
             
   
   
@@ -655,8 +672,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_8">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_9">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -837,10 +854,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_10" >
         
           
-          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="">
+          <label class="md-nav__link" for="__nav_1_10" id="__nav_1_10_label" tabindex="">
             
   
   
@@ -858,8 +875,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_10">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1138,10 +1155,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#interfaces" class="md-nav__link">
+  <a href="#usage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Interfaces
+        Usage
       
     </span>
   </a>
@@ -1149,21 +1166,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
+  <a href="#capabilities" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Features
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#beyond-task-execution" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Beyond task execution
+        Capabilities
       
     </span>
   </a>
@@ -1191,65 +1197,91 @@
 
 
 <h1 id="overview">Overview</h1>
-<p>Freeact is a lightweight, general-purpose agent that acts via <a href="https://machinelearning.apple.com/research/codeact"><em>code actions</em></a> rather than JSON tool calls<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. It writes executable Python code that can call multiple tools programmatically, process intermediate results, and use loops and conditionals in a single pass, which would otherwise require many inference rounds with JSON tool calling.</p>
-<p><a href="#beyond-task-execution">Beyond executing tools</a>, freeact can develop new tools from successful code actions, evolving its own tool library over time. Tools are defined via Python interfaces, progressively discovered and loaded from the agent's <em>workspace</em><sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> rather than consuming context upfront. All execution happens locally in a secure sandbox via <a href="https://gradion-ai.github.io/ipybox/">ipybox</a> and <a href="https://github.com/anthropic-experimental/sandbox-runtime">sandbox-runtime</a>.</p>
+<p>Freeact is a lightweight agent that acts by executing Python code and shell commands.
+Code actions are key for an agent to improve its own tool library and codebase.</p>
+<p>Freeact has a tiny core, a small system prompt, and is extensible with agent skills.
+It relies on a minimal set of generic tools: read, write, execute, subagent, and tool search.</p>
+<p>Code and shell command execution runs locally in a stateful, sandboxed environment.
+Freeact supports utilization of MCP servers by generating Python APIs for their tools.</p>
 <div class="admonition note">
 <p class="admonition-title">Supported models</p>
 <p>Freeact supports models compatible with <a href="https://ai.pydantic.dev/">Pydantic AI</a>, with <code>gemini-3-flash-preview</code> as the current default.</p>
 </div>
-<h2 id="interfaces">Interfaces</h2>
-<p>Freeact provides a <a href="sdk/">Python SDK</a> for application integration, and a <a href="cli/">CLI tool</a> for running the agent in a terminal.</p>
-<h2 id="features">Features</h2>
-<p>Freeact combines the following elements into a coherent system:</p>
+<h2 id="usage">Usage</h2>
 <table>
 <thead>
 <tr>
-<th>Feature</th>
+<th>Component</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Programmatic tool calling</strong></td>
-<td>Agents <a href="quickstart/#running-a-task">call tools programmatically</a> within code actions rather than through JSON structures. Freeact <a href="quickstart/#generating-mcp-tool-apis">generates typed Python APIs</a> from MCP tool schemas to enable this. LLMs are heavily pretrained on Python code, making this more reliable than JSON tool calling.</td>
+<td><strong><a href="sdk/">Agent SDK</a></strong></td>
+<td>Agent harness and Python API for building freeact applications.</td>
 </tr>
 <tr>
-<td><strong>Reusable code actions</strong></td>
-<td>Successful code actions can be <a href="examples/saving-codeacts/">saved as discoverable tools</a> with clean interfaces where function signature, data models and docstrings are separated from implementation. Agents can then use these tools in later code actions, preserving behavior as executable tools. The result is tool libraries that evolve as agents work.</td>
-</tr>
-<tr>
-<td><strong>Agent skills</strong></td>
-<td>Freeact supports the <a href="https://agentskills.io/">agentskills.io</a> specification, a lightweight format for <a href="examples/agent-skills/">extending agent capabilities</a> with specialized knowledge and workflows. Freeact <a href="configuration/#bundled-skills">provides skills</a> for saving code actions as tools, enhancing existing tools, and structured task planning.</td>
-</tr>
-<tr>
-<td><strong>Progressive loading</strong></td>
-<td>Tool and skill information is <a href="quickstart/#running-a-task">loaded in stages as needed</a>, rather than consuming context upfront. For tools: category names, tool names, and API definitions load progressively as needed. For skills: metadata loads at startup; full instructions load when triggered.</td>
-</tr>
-<tr>
-<td><strong>Sandbox mode</strong></td>
-<td>Code actions execute locally in a stateful IPython kernel via ipybox. <a href="sandbox/">Sandbox mode</a> restricts filesystem and network access for executed code (<a href="examples/sandbox-mode/">example</a>). Stdio MCP servers can be sandboxed independently.</td>
-</tr>
-<tr>
-<td><strong>Unified approval</strong></td>
-<td>Code actions, programmatic tool calls, and JSON-based tool calls all require approval before proceeding. <a href="sdk/#approval">Unified approval</a> ensures every action can be inspected and gated with a uniform interface regardless of how it originates.</td>
-</tr>
-<tr>
-<td><strong>Python ecosystem</strong></td>
-<td>Agents can use any Python package available in the execution environment, from data processing with <code>pandas</code> to visualization with <code>matplotlib</code> to HTTP requests with <code>httpx</code>. Many capabilities like data transformation or scientific computing don't need to be wrapped as tools when agents can <a href="examples/python-packages/">call libraries directly</a>.</td>
+<td><strong><a href="cli/">CLI tool</a></strong></td>
+<td>Terminal interface for interactive conversations with a freeact agent.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="beyond-task-execution">Beyond task execution</h2>
-<p>Most agents focus on either software development (coding agents) or on non-coding task execution using predefined tools, but not both. Freeact covers a wider range of this spectrum, from task execution to tool development. Its primary function is executing code actions with programmatic tool calling, guided by user instructions and custom skills. </p>
-<p>Beyond task execution, freeact can save successful <a href="examples/saving-codeacts/">code actions as reusable tools</a> or <a href="examples/output-parser/">enhance existing tools</a>, acting as a toolsmith in its <em>workspace</em><sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup>. For heavier tool engineering like refactoring or reducing tool overlap, freeact is complemented by coding agents like Claude Code, Gemini CLI, etc. Currently the toolsmith role is interactive, with autonomous tool library evolution planned for future versions.</p>
+<h2 id="capabilities">Capabilities</h2>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Code actions</strong></td>
+<td>Freeact agents act via Python code and shell commands. This enables tool composition and intermediate result processing in a single LLM inference pass.</td>
+</tr>
+<tr>
+<td><strong>Local execution</strong></td>
+<td>Freeact executes code and shell commands locally in an IPython kernel provided by <a href="https://github.com/gradion-ai/ipybox">ipybox</a>. Data, configuration and generated tools live in local workspaces.</td>
+</tr>
+<tr>
+<td><strong>Sandbox mode</strong></td>
+<td>IPython kernels optionally run in a sandbox environment based on Anthropic's <a href="https://github.com/anthropic-experimental/sandbox-runtime">sandbox-runtime</a>. It enforces filesystem and network restrictions on OS-level.</td>
+</tr>
+<tr>
+<td><strong>MCP code mode</strong></td>
+<td>Freeact calls MCP server tools programmatically<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> via generated Python APIs. This enables composition of tool calls in code actions with much lower latency.</td>
+</tr>
+<tr>
+<td><strong>Tool discovery</strong></td>
+<td>Tools are discovered via category browsing or hybrid BM25/vector search. On-demand loading frees the context window and scales to larger tool libraries.</td>
+</tr>
+<tr>
+<td><strong>Tool authoring</strong></td>
+<td>Agents can create new tools, enhance existing tools, or save code actions as reusable tools. This captures successful experience as executable knowledge.</td>
+</tr>
+<tr>
+<td><strong>Agent skills</strong></td>
+<td>Skills give agents new capabilities and expertise based on <a href="https://agentskills.io/">agentskills.io</a>. They compose naturally with code actions and agent-authored tools.</td>
+</tr>
+<tr>
+<td><strong>Subagent delegation</strong></td>
+<td>Tasks can be delegated to subagents, each using their own sandbox. It enables specialization and parallelization without cluttering the main agent's context.</td>
+</tr>
+<tr>
+<td><strong>Action approval</strong></td>
+<td>Fine-grained approval of code actions and (programmatic) tool calls from both main agents and subagents. Enables human control over potentially risky actions.</td>
+</tr>
+<tr>
+<td><strong>Session persistence</strong></td>
+<td>Freeact persists agent state incrementally. Persisted sessions can be resumed and serve as a record for debugging, evaluation, and improvement.</td>
+</tr>
+</tbody>
+</table>
 <div class="footnote">
 <hr />
 <ol>
 <li id="fn:1">
-<p>Freeact also supports JSON-based tool calls on MCP servers, but mainly for internal operations.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-<li id="fn:2">
-<p>A workspace is an agent's working directory where it manages tools, skills, configuration and other resources.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p>Freeact also supports MCP server integration via JSON tool calling but the recommended approach is programmatic tool calling.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>

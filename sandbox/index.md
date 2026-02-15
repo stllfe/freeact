@@ -1,6 +1,6 @@
 # Sandbox Mode
 
-Freeact can restrict filesystem and network access for code execution and MCP servers using [ipybox sandbox](https://gradion-ai.github.io/ipybox/sandbox/) and Anthropic's [sandbox-runtime](https://github.com/anthropic-experimental/sandbox-runtime).
+Freeact can restrict filesystem and network access for [code execution](https://gradion-ai.github.io/freeact/execution/index.md) and MCP servers using [ipybox sandbox](https://gradion-ai.github.io/ipybox/sandbox/) and Anthropic's [sandbox-runtime](https://github.com/anthropic-experimental/sandbox-runtime).
 
 Prerequisites
 
@@ -8,9 +8,13 @@ Check the installation instructions for [sandbox mode prerequisites](https://gra
 
 ## Code Execution
 
+Scope
+
+Sandbox restrictions apply equally to Python code and shell commands, as both [execute](https://gradion-ai.github.io/freeact/execution/index.md) in the same IPython kernel.
+
 ### CLI Tool
 
-The `--sandbox` option enables sandboxed code execution:
+The `--sandbox` option enables sandboxed [code execution](https://gradion-ai.github.io/freeact/execution/index.md):
 
 ```
 freeact --sandbox
@@ -22,7 +26,7 @@ A custom configuration file can override the [default restrictions](#default-res
 freeact --sandbox --sandbox-config sandbox-config.json
 ```
 
-### Python SDK
+### Agent SDK
 
 The `sandbox` and `sandbox_config` parameters of the Agent constructor provide the same functionality:
 
@@ -30,6 +34,7 @@ The `sandbox` and `sandbox_config` parameters of the Agent constructor provide t
 from pathlib import Path
 
 agent = Agent(
+    "main",
     ...
     sandbox=True,
     sandbox_config=Path("sandbox-config.json"),
@@ -66,13 +71,13 @@ This macOS-specific example configuration allows additional network access to `e
 
 ## MCP Servers
 
-MCP servers run as separate processes and are not affected by [code execution sandboxing](#code-execution). Local stdio servers can be sandboxed independently by wrapping the server command with the `srt` tool from sandbox-runtime. This applies to both `mcp-servers` and `ptc-servers` in the [MCP server configuration](https://gradion-ai.github.io/freeact/configuration/#mcp-server-configuration).
+MCP servers run as separate processes and are not affected by [code execution sandboxing](#code-execution). Local stdio servers can be sandboxed independently by wrapping the server command with the `srt` tool from sandbox-runtime. This applies to both [`mcp-servers`](https://gradion-ai.github.io/freeact/configuration/#mcp-servers) and [`ptc-servers`](https://gradion-ai.github.io/freeact/configuration/#ptc-servers) in the [configuration file](https://gradion-ai.github.io/freeact/configuration/#configuration-file).
 
 ### Filesystem MCP Server
 
 This example shows a sandboxed [filesystem MCP server](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem) in the `mcp-servers` section:
 
-.freeact/servers.json
+.freeact/config.json
 
 ```
 {
@@ -118,7 +123,7 @@ uv add "httpx[socks]>=0.28.1"
 
 Then add it to the `ptc-servers` section:
 
-.freeact/servers.json
+.freeact/config.json
 
 ```
 {
